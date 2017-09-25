@@ -1,0 +1,158 @@
+/**
+ * 
+ */
+
+/********************************
+    DÙNG CHUNG
+ *******************************/
+body, td, th {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #444;
+}
+body {
+    width: 800px;
+    margin: 30px auto;
+}
+a {
+    text-decoration: none;
+    color: blue;
+}
+img {
+    border: none;
+}
+form {
+    margin: 0px auto;
+}
+fieldset {
+    padding: 10px;
+    border: 1px solid silver;
+    text-align: left;
+    margin: 0px auto;
+    /** Thêm CSS 3.0 **/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+legend {
+    text-transform: uppercase;
+    color: #0A71A5;
+    font-weight: bold;
+    font-size: 14px;
+}
+input, select {
+    padding: 3px;
+    outline: none;
+}
+
+.form_label {
+    display: inline-block;
+    width: 120px;
+    margin: 3px;
+    vertical-align: middle;
+}
+.form_item {
+    display: inline-block;
+    margin: 3px;
+    vertical-align: middle;
+}
+.textbox,.select {
+    width: 300px;
+    border: 1px solid silver;
+    /** Thêm CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.textbox:hover {
+    background: #f5f5f5;
+}
+.button {
+    padding: 5px 20px 5px 20px;
+    background-color: #0E76AA;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    /** Thêm CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    
+}
+.button:hover {
+    background-color: #0000a3;
+}
+.error_msg {
+    text-align: left;
+    color: red;
+    font-weight: bold;
+    padding: 20px 5px 20px 60px;
+    border: 1px dotted #ccc;
+    background: #f7f7f7 url("../images/warning.png") no-repeat 15px center;
+    /** Thêm CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+
+}
+
+#layout {
+    /** Thêm CSS 3.0 **/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 1px 1px 7px #ccc;
+    -moz-box-shadow: 1px 1px 7px #ccc;
+    -webkit-box-shadow: 1px 1px 7px #ccc;
+}
+#top {
+    background-color: #0000a3;
+    height: 60px;
+    line-height: 60px;
+    padding: 0px 20px;
+    font-size: 16px;
+    color: #eee;
+    font-weight: bold;
+    /** Thêm CSS 3.0 **/
+    border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+}
+
+#bottom{
+    line-height: 40px;
+    height: 40px;
+    color: white;
+     background-color: #0000a3;
+    text-align: center;
+    /** Thêm CSS 3.0 **/
+    border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    font-size: 18px;
+}
+/**********************
+    BẢNG DANH SÁCH
+ *********************/
+.list_table /* Bảng danh sách */ {
+    border-collapse: collapse;
+    width: 95%;
+    margin: 10px auto;
+}
+
+/********************************
+    DÙNG CHO TRANG CHÍNH 
+ *******************************/
+
+/********************************
+    DÙNG CHO TRANG LOGIN 
+ *******************************/
+.login_img {
+    width: 150px;
+    height: 150px;
+    background: url("../images/login_lock.png") no-repeat center center;
+}
+/*************************************************
+    THANH PHÂN TRANG (THUẬT TOÁN PHÂN TRANG) 
+ ************************************************/

@@ -1,0 +1,768 @@
+/**
+ * 
+ * @copyright 2016
+ */
+
+/********************************
+    DÙNG CHUNG
+ *******************************/
+ .clear{
+    clear: both;
+ }
+
+body, td, th {
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease-in-out;
+   
+}
+body {
+    
+    width: 1200px;
+    margin: 30px auto;
+    background: white;
+    overflow: visible;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+img {
+    border: none;
+}
+form {
+    margin: 10px auto;
+}
+#aaa{
+    width: 120px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+fieldset {
+    padding: 10px;
+    border: 1px solid silver;
+    text-align: left;
+    margin: 0px auto;
+    /** Thêm CSS 3.0 **/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+legend {
+    text-transform: uppercase;
+    color: #0A71A5;
+    font-weight: bold;
+    font-size: 18px;
+}
+input, select {
+    padding: 3px;
+    outline: none;
+  }
+textarea {
+    width: 100%;
+    outline: none;
+}
+img.thumbs {
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 2px;
+    background: white;
+}
+.form_label {
+    display: inline-block;
+    width: 150px;
+    font-size: 16px;
+    margin: 3px;
+    vertical-align: middle;
+}
+.form_item {
+    display: inline-block;
+    margin: 3px;
+    vertical-align: middle;
+}
+.textbox,.select {
+    width: 300px;
+    border: 1px solid silver;
+    /** Thêm CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.textbox:hover {
+    background: #f5f5f5;
+}
+.button {
+    padding: 5px 20px 5px 20px;
+    background-color: #0E76AA;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    /** Thêm CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    
+}
+.button:hover {
+    background-color: #C0206E;
+}
+.error_msg {
+    text-align: left;
+    color: red;
+    font-weight: bold;
+    padding: 20px 5px 20px 60px;
+    border: 1px dotted #ccc;
+    background: #f7f7f7 url("../images/warning.png") no-repeat 15px center;
+    /** Thêm CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.error_msg li{
+    list-style: none;
+}
+.result_msg {
+    text-align: left;
+    font-style: italic;
+    color: black;
+    padding: 20px 5px 20px 60px;
+    border: 1px solid green;
+    background: #C1FFE0 url("../images/valid.png") no-repeat 15px center;
+}
+#layout {
+    /** Thêm CSS 3.0 **/
+    background: url("../images/hinh_nen.jpg") no-repeat;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 1px 1px 7px #ccc;
+    -moz-box-shadow: 1px 1px 7px #ccc;
+    -webkit-box-shadow: 1px 1px 7px #ccc;
+    height: auto;
+
+}
+#top {
+    background-color: #0000a3;
+    height: 87px;
+    padding: 0px 10px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    /** Thêm CSS 3.0 **/
+    border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    transition: all .6s ease-in-out;
+}
+#top #left{
+    float: left;
+    height: 87px;
+    transition: height 2s ease 3s;
+}
+#top #right{
+    float: left;
+    height: 87px;
+    line-height: 87px;
+    padding:right;
+    margin-left: 100px;
+    transition: height 2s ease 3s;
+}
+.menu, .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+
+    background: rgba(72,154,234,1);
+    color: black;
+    border-bottom: 2px solid #181818;
+    border-top: 2px solid #303030;
+    min-width: 200px;
+    font-weight: bold;
+    height: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 18px;
+  /*  border: 1px solid white;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;*/
+    border-radius: 10px;
+}
+.menu > li {
+    display: block;
+    float: left;
+    position: relative;
+}
+.menu > li:last-child {
+    float: left;
+    width: 80px;
+}
+.menu a {
+    color: black;
+    
+    font-size: 17px;
+    line-height: 54px;
+    padding: 0 25px;
+    width: 170px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+ 
+/* onhover styles */
+.menu li:hover {
+    background-color: #1c1c1c;
+    border-bottom: 2px solid #222222;
+    border-top: 2px solid #1B1B1B;
+}
+.menu li:hover > a {
+    border-radius: 5px 0 0 0;
+    color: white;
+}
+ 
+/* submenu styles */
+.submenu {
+    left: 0;
+    max-height: 0;
+   
+    top: 100%;
+    z-index: 0;
+    -webkit-perspective: 400px;
+    -moz-perspective: 400px;
+    -ms-perspective: 400px;
+    -o-perspective: 400px;
+    perspective: 400px;
+}
+.submenu li {
+    opacity: 0;
+ 
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+ 
+    -webkit-transition: opacity .4s, -webkit-transform .5s;
+    -moz-transition: opacity .4s, -moz-transform .5s;
+    -ms-transition: opacity .4s, -ms-transform .5s;
+    -o-transition: opacity .4s, -o-transform .5s;
+    transition: opacity .4s, transform .5s;
+}
+.menu .submenu li:hover a {
+    border-radius: 0;
+    color: #ffffff;
+}
+.menu > li:hover .submenu, .menu > li:focus .submenu {
+    max-height: 2000px;
+    z-index: 10;
+}
+.menu > li:hover .submenu li, .menu > li:focus .submenu li {
+    opacity: 1;
+ 
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+ 
+/* CSS3 delays for transition effects */
+.menu li:hover .submenu li:nth-child(1) {
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.menu li:hover .submenu li:nth-child(2) {
+    -webkit-transition-delay: 50ms;
+    -moz-transition-delay: 50ms;
+    -ms-transition-delay: 50ms;
+    -o-transition-delay: 50ms;
+    transition-delay: 50ms;
+}
+.menu li:hover .submenu li:nth-child(3) {
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    -ms-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+.menu li:hover .submenu li:nth-child(4) {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    transition-delay: 150ms;
+}
+.menu li:hover .submenu li:nth-child(5) {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+.menu li:hover .submenu li:nth-child(6) {
+    -webkit-transition-delay: 250ms;
+    -moz-transition-delay: 250ms;
+    -ms-transition-delay: 250ms;
+    -o-transition-delay: 250ms;
+    transition-delay: 250ms;
+}
+.menu li:hover .submenu li:nth-child(7) {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+.menu li:hover .submenu li:nth-child(8) {
+    -webkit-transition-delay: 350ms;
+    -moz-transition-delay: 350ms;
+    -ms-transition-delay: 350ms;
+    -o-transition-delay: 350ms;
+    transition-delay: 350ms;
+}
+ 
+.submenu li:nth-child(1) {
+    -webkit-transition-delay: 350ms;
+    -moz-transition-delay: 350ms;
+    -ms-transition-delay: 350ms;
+    -o-transition-delay: 350ms;
+    transition-delay: 350ms;
+}
+.submenu li:nth-child(2) {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+.submenu li:nth-child(3) {
+    -webkit-transition-delay: 250ms;
+    -moz-transition-delay: 250ms;
+    -ms-transition-delay: 250ms;
+    -o-transition-delay: 250ms;
+    transition-delay: 250ms;
+}
+.submenu li:nth-child(4) {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+.submenu li:nth-child(5) {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    transition-delay: 150ms;
+}
+.submenu li:nth-child(6) {
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    -ms-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+.submenu li:nth-child(7) {
+    -webkit-transition-delay: 50ms;
+    -moz-transition-delay: 50ms;
+    -ms-transition-delay: 50ms;
+    -o-transition-delay: 50ms;
+    transition-delay: 50ms;
+}
+.submenu li:nth-child(8) {
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+#content {
+    font-weight: bold;
+    height:auto;
+}
+#content #left{
+    float: left;
+    width: 280px;
+    background-color: rgba(72,154,234,1);
+    margin-bottom: 10px;
+     margin-top: 10px;
+    /* CSS 3 */
+    border: 1px solid white;
+    border-radius: 10px;
+    border-radius: 0px 10px 10px 0px;
+    -moz-border-radius: 0px 10px 10px 0px;
+    -webkit-border-radius: 0px 10px 10px 0px;
+}
+#content #left h1{
+    list-style-type: none;
+    font-size: 20px;
+   text-align: center;
+   color: white;
+   font-weight: bolder;
+}
+#content #left ul{
+    list-style-type: none;
+    font-size: 16px;
+    padding:0px 20px;
+}
+#content #left li{
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+#content #left li a{
+    padding: 0px 10px;
+    color:black;
+    font-weight: bold;
+    display: block;
+}
+#content #left li ul{
+    display: none;
+}
+#content #left a {
+    color: #555555;
+}
+#content #left a:hover {
+    color: #BF0000;
+}
+ #content #main {
+    width: 1200px;
+    margin-left: 5px;
+    float: left;
+}
+ #topmain {
+    margin-right: 10px;
+    text-align: right;
+    height: auto;
+    line-height: 50px;
+}
+#topmain button {
+    margin-right: 50px;
+}
+#topmain input {
+    
+}
+#bottommain{
+    align-items: center;
+}
+#bottom{
+    line-height: 40px;
+    height: 40px;
+    color: #aaa;
+    background:#0000a3;
+    text-align: center;
+    /** Thêm CSS 3.0 **/
+    border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    clear: both;
+}
+/**********************
+    BẢNG DANH SÁCH
+ *********************/
+.list_table /* Bảng danh sách */ {
+    width: 90%;
+    margin:10px 50px;
+    border-collapse: collapse;
+    font-size: 16px;
+
+}
+.list_heading /* Dòng chứa tiêu đề bảng */ {
+    background:#0000a3;
+    border-right: 1px solid black;
+}
+.list_heading > td /* Những ô ở dòng tiêu đề */ {
+    font-weight: bold;
+    text-align: center;
+    height: 26px;
+    color: white;
+    background: url('../images/nav_sep.png') no-repeat left bottom;
+    padding: 3px;
+}
+.list_data > td /* Dòng chứa record */ {
+    border: 1px solid darkblue;
+    padding: 3px;
+}
+.list_data:hover  /* Dòng chứa record */ {
+    background: #f6f6f6;
+}
+.list_data:hover a  /* Dòng chứa record */ {
+    color: red;
+}
+.id_col /* Cột số thứ tự */ {
+    width: 35px;
+}
+.action_col /* Cột thao tác quản lý */ {
+    width: 100px;
+}
+.aligncenter {
+    text-align: center;
+}
+.alignright {
+    text-align: right;
+}
+/********************************
+    DÙNG CHO TRANG CHÍNH 
+ *******************************/
+.function_table {
+    border-spacing: 10px;
+    /*
+    background-color: #F5F5F5;
+    border: 1px solid #D6D6D6;
+    */
+    /* Thêm một chút CSS 3 */
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding-left: 50px;
+}
+.function_item {
+    border: 1px solid #d8d8d8;
+    width: 500px;
+    height: 80px;
+    padding: 85px 5px 5px 5px;
+    text-align: center;
+    /* Thêm một chút CSS 3 */
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+.function_item:hover {
+    background-color: white;
+    /* Thêm một chút CSS 3 */
+    border-radius: 0px 0px 20px 0px;
+    -moz-border-radius: 0px 0px 20px 0px;
+    -webkit-border-radius: 0px 0px 20px 0px;
+    box-shadow: 0px 0px 4px #cecece;
+    -moz-box-shadow: 0px 0px 4px #cecece;
+    -webkit-box-shadow: 0px 0px 4px #cecece;
+}
+.function_item a {
+    color: #555555;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+.function_item:hover a{
+    color: black;
+}
+.statistics_panel {
+    width: 500px;
+    text-align: left;
+    vertical-align: top;
+    line-height: 22px;
+    padding: 0px 10px;
+    font-size: 20px;
+
+}
+.statistics_panel h3 {
+    font-size: 25px;
+    height: 40px;
+   
+    margin: 29px 0px 0px 50px;
+    padding: 0px 0px 0px 50px;
+    background: url('../images/chart.png') no-repeat left center;
+}
+.statistics_panel ul{
+    margin-left: 100px;
+    margin-top: 1px;
+
+
+}
+.statistics_panel li{
+    width:  300px;
+    margin-bottom: 5px;
+
+}
+.user_add {
+    background: url("../images/user_add.png") no-repeat center center;
+}
+.user_list {
+    background: url("../images/user.png") no-repeat center center;
+}
+.cate_add {
+    background: url("../images/category_add.png") no-repeat center center;
+}
+.cate_list {
+    background: url("../images/category.png") no-repeat center center;
+}
+.new_add {
+    background: url("../images/news_add.png") no-repeat center center;
+}
+.new_list {
+    background: url("../images/news.png") no-repeat center center;
+}
+.khang_add {
+    background: url("../images/khachhang.png") no-repeat center center;
+}
+
+.khang_list {
+    background: url("../images/qlkhachhang.png") no-repeat center center;
+}
+.hdon_add {
+    background: url("../images/hoadon.png") no-repeat center center;
+}
+.hdon_list {
+    background: url("../images/qlhoadon.png") no-repeat center center;
+}
+.dienke_add {
+    background: url("../images/dienke.png") no-repeat center center;
+}
+.dienke_list {
+    background: url("../images/qldienke.jpg") no-repeat center center;
+}
+.gdien_add {
+    background: url("../images/giadien.png") no-repeat center center;
+}
+.gdien_list {
+    background: url("../images/qlgiadien.png") no-repeat center center;
+}
+.tracuu {
+    background: url("../images/tra cuu.png") no-repeat center center;
+}
+/********************************
+    DÙNG CHO TRANG LOGIN 
+ *******************************/
+.login_img {
+    width: 150px;
+    height: 150px;
+    background: url("../images/login_lock.png") no-repeat center center;
+}
+/*************************************************
+    THANH PHÂN TRANG (THUẬT TOÁN PHÂN TRANG) 
+ ************************************************/
+#paging_nav {
+    text-align: center;
+    margin-top: 10px;
+}
+#paging_nav span.current_page {
+    margin: 0px 2px;
+    padding: 3px 7px;
+    background-image: url('../images/content_bg.png');
+    color: #ccc;
+    font-weight: bold;
+}
+#paging_nav a {
+    margin: 0px 2px;
+    padding: 2px 6px;
+    border: 1px solid gray;
+    color: #555555;
+    font-weight: bold;
+}
+#paging_nav a:hover {
+    padding: 3px 7px;
+    background-image: url('../images/content_bg.png');
+    border: none;
+    color: #ccc;
+}
+
+
+/*//giay bao dien*/
+.bd {
+   padding-left: 300px;
+   padding-top: 20px;
+}
+#tbl {
+    width: 700px; 
+    height: auto;"
+}
+#div_tbl {
+    width: 700px; 
+    border: 1px solid black; 
+    height: auto;
+    margin: 15px 200px;
+    background-color:white;
+}
+.bd #div_tbl #tbl .td2 {
+    width: 80px;
+
+}
+.h5 {
+    text-align: left;
+}
+.td {
+    text-align: center;
+    color: blue;
+}
+.cl_td {
+    color: blue;
+}
+.cl_b {
+    color: black;
+}
+
+
+/*//inhoadon*/
+#body-hoadon {
+    border: 1px solid black;
+    width: 800px;
+    margin: 15px 200px;
+    background-color:white;
+}
+.col-md-12 {
+    width: 800px;
+}
+.col-md-2 {
+    width: 200px;
+     float: left;
+}
+.col-md-7 {
+    width: 430px;
+    float: left;
+    text-align: center;
+    line-height: 0.5;
+    color: blue;
+}
+.col-md-3 {
+    width: 150px;
+    float: right;
+    /*border: 1px solid black;*/
+    line-height: 0.5;
+    color: blue;
+
+}
+.xoa {
+    clear: both;
+}
+.dt {
+    float: left;
+    width: 250px;
+}
+.mst {
+    float: left;
+    width: 250px;
+}
+.dtsc {
+    float: left;
+    width: 250px;
+}
+.col-tbhd-12 {
+    width: 600px;
+    /*border: 1px solid black;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+
+}
+.hoadon {
+    margin-top: 20px;
+    border: 1;
+    padding-right: 20px;
+
+}
+.div_ringht {
+    height: 40px;
+}
